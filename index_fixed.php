@@ -24,7 +24,7 @@
         <?php
         $xmlDoc = new DOMDocument();
         $xmlDoc->load("Uploads/hack.xml");
-        // bỏ đoạn LIBXML_NOENT | LIBXML_DTDLOAD : bỏ qua Cờ sẽ dân đến lỗi 
+        // bỏ đoạn LIBXML_NOENT | LIBXML_DTDLOAD
         $xmlList = simplexml_import_dom($xmlDoc);
         foreach ($xmlList->student as $student) {
             echo "<tr><td>{$student->name}</td><td>{$student->age}</td><td>{$student->school}</td></tr>";
